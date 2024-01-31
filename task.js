@@ -39,30 +39,39 @@ function nbYear(p0, percent, aug, p) {
     return year;
 };
 //Друг или враг?
-function friend(friends){
-    return friends.filter((name)=> name.length === 4);
-  }
+function friend(friends) {
+    return friends.filter((name) => name.length === 4);
+}
 //Мили на галлон в километры на литр
-function converter (mpg) {
+function converter(mpg) {
     let lpg = 4.54609188;
-     let kmpm = 1.609344 ;
-     let kpl = +((kmpm /lpg) *mpg).toFixed(2);
-     
-     return kpl;
-   }
+    let kmpm = 1.609344;
+    let kpl = +((kmpm / lpg) * mpg).toFixed(2);
+
+    return kpl;
+}
 //Перевернутые струны
-function solution(str){
+function solution(str) {
     return str.split("").reverse().join("");
-    }
+}
 //Подсчет битов
-var countBits = function(n) {
-    let newNum =  n.toString(2);
-     let sum = 0;
-       for (let i =0 ; i < newNum.length; i++) {
-                   if (newNum[i] === '1') {
-                       sum += 1
-                   }
-               }
-     return sum;
-   };
+var countBits = function (n) {
+    let newNum = n.toString(2);
+    let sum = 0;
+    for (let i = 0; i < newNum.length; i++) {
+        if (newNum[i] === '1') {
+            sum += 1
+        }
+    }
+    return sum;
+};
+
+//Simple Pig Latin
+function pigIt(str) {
+    return str.split(" ").map(word => {
+        if (word.match(/[^a-z]/i)) return word
+        return word.slice(1) + word[0] + "ay"
+    }).join(" ")
+}
+
 
