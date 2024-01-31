@@ -74,4 +74,16 @@ function pigIt(str) {
     }).join(" ")
 }
 
+//Counting Duplicates
+function duplicateCount(text) {
+    let textArr = text.toLowerCase().split("").sort();
+    let count = [];
+    for (let i = 0; i < textArr.length; i++) {
+        if (textArr[i] === textArr[i + 1]) {
+            count.push(textArr[i])
+        }
+    }
+    let setArr = new Set(count);
+    return setArr.size;
+}
 
