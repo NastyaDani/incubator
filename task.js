@@ -95,4 +95,12 @@ var number = function (busStops) {
     }
     return count;
 }
+//Two to One
+function longest(s1, s2) {
+    let arrS1 = s1.split('');
+    let arrS2 = s2.split('');
+    let arr = arrS1.concat(arrS2).sort();
+    let set = Array.from(new Set(arr)).join('');
+    return set;
+}
 
