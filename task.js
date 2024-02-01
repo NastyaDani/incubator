@@ -112,3 +112,8 @@ function findNeedle(haystack) {
         }
     }
 }
+//Shortest Word
+function findShort(s){
+    let shortest = s.split(' ').map( word => word.length).sort((a,b) => a - b);
+      return shortest[0];
+    }
