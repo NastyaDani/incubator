@@ -86,4 +86,13 @@ function duplicateCount(text) {
     let setArr = new Set(count);
     return setArr.size;
 }
+//Number of People in the Bus
+var number = function (busStops) {
+    let count = 0;
+    for (let i = 0; i < busStops.length; i++) {
+        let sum = busStops[i][0] - busStops[i][1];
+        count += sum;
+    }
+    return count;
+}
 
