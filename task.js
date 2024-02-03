@@ -117,3 +117,12 @@ function findShort(s) {
     let shortest = s.split(' ').map(word => word.length).sort((a, b) => a - b);
     return shortest[0];
 }
+//Beginner - Lost Without a Map
+function maps(x) {
+    let a = [];
+    for (let i = 0; i < x.length; i++) {
+        let n = x[i] * 2;
+        a.push(n);
+    }
+    return a;
+}
